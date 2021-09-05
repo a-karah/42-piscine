@@ -1,0 +1,5 @@
+Credentials cache: API:1A6C03B4-9053-4AF6-8543-BD6E9AE654BA
+        Principal: akarahan@42ISTANBUL.COM.TR
+
+  Issued                Expires               Principal
+Sep  2 12:32:07 2021  Sep  2 22:32:07 2021  krbtgt/42ISTANBUL.COM.TR@42ISTANBUL.COM.TR
