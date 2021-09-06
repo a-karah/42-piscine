@@ -1,32 +1,11 @@
-void	ft_swap(int *a, int *b);
-/*
-void ft_quicksort(int *arr, int left, int right){
-	//Base Case
-	if(left > right){
-		return;
-	}
+void    ft_swap(int *a, int *b)
+{
+    int temp;
 
-	//Partition
-	int pivot, i, j;
-
-	pivot = arr[left];
-	i = left + 1;
-	j = i;
-
-	while(j < right){
-		if(arr[j] <= pivot){
-			ft_swap(&arr[i], &arr[j]);
-			i++;
-		}
-
-		j++;
-	}
-	ft_swap(&arr[left], &arr[i]);
-
-	ft_quicksort(arr, left, i-1);
-	ft_quicksort(arr, i+1, right);
+    temp = *a;
+    *a = *b;
+	*b = temp;
 }
-*/
 
 void	ft_bubblesort(int *arr, int size)
 {
