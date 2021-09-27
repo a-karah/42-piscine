@@ -13,10 +13,10 @@ CFDEBUG = -ansi -pedantic -Wall -g
 RM = rm -f
 
 ${NAME}: ${OBJS}
-	${CC} ${CFLAGS} ${OBJS} ${INCL} -o ${NAME}
+	${CC} ${CFLAGS} ${OBJS} -o ${NAME}
 
-.c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+%.o: %.c ${INCL}
+	${CC} ${CFLAGS} -c $< -o $@
 
 all: ${NAME}
 
