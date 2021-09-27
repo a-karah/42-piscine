@@ -6,6 +6,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <fcntl.h>
 
 void	ft_putchar(int fd, char c);
 void	ft_putstr(int fd, char *s);
