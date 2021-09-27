@@ -9,6 +9,10 @@ int	main(int argc, char *argv[])
 		handle_error(1);
 	else if (argc == 2)
 	{
+		if (ft_strcmp(argv[1], ".") == 0 || ft_strcmp(argv[1], "/") == 0 \
+			|| ft_strcmp(argv[1], "./") == 0 || ft_strcmp(argv[1], "..") == 0 \
+			|| ft_strcmp(argv[1], "../") == 0)
+			ft_putstr(STDOUT, "Is a directory.\n");
 		fd = open(argv[1], O_RDONLY);
 		if (fd < 1)
 			handle_error(3);

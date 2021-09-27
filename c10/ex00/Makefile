@@ -1,6 +1,8 @@
 # Source files
-INCL = *.h
-SRCS = *.c
+INCL = ft_display.h
+SRCS = error.c \
+	   helpers.c \
+	   main.c
 OBJS = $(SRCS: .c=.o)
 NAME = ft_display_file
 
@@ -8,7 +10,7 @@ NAME = ft_display_file
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 CFDEBUG = -ansi -pedantic -Wall -g
-RM = rm -rf
+RM = rm -f
 
 ${NAME}: ${OBJS}
 	${CC} ${CFLAGS} ${OBJS} ${INCL} -o ${NAME}
