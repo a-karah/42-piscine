@@ -26,7 +26,7 @@ ${NAME}: ${OBJS}
 	@echo "================"
 	@echo "Compiling files"
 	@echo "================"
-	${CC} ${CFLAGS} ${OBJS} -o ${NAME} -I ${INCLDIR}
+	${CC} ${CFLAGS} ${OBJS} -o ${NAME}
 
 ${OBJDIR}/%.o: ${SRCDIR}/%.c
 	${CC} ${CFLAGS} -c $< -o $@ -I ${INCLDIR}
