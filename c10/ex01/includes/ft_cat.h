@@ -3,6 +3,7 @@
 # define STDIN 0
 # define STDOUT 1
 # define STDERR 2
+# define BUFFER_SIZE 2048
 
 # include <unistd.h>
 # include <stdlib.h>

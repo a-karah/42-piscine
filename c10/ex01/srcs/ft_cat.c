@@ -2,7 +2,7 @@
 
 void	read_from_stdin(void)
 {
-	char	buf[2048];
+	char	buf[BUFFER_SIZE];
 	int		readsize;
 
 	while (1)
@@ -22,7 +22,7 @@ void	read_from_stdin(void)
 void	read_from_file(char *fname)
 {
 	int		fd;
-	char	buf[2048];
+	char	buf[BUFFER_SIZE];
 	int		readsize;
 
 	fd = open(fname, O_RDONLY);
