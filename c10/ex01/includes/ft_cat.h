@@ -12,7 +12,6 @@
 
 void	ft_putchar(int fd, char c);
 void	ft_putstr(int fd, char *s);
-int		ft_strcmp(char *s1, char *s2);
 void	handle_error(char *fname);
 void	read_from_stdin(void);
 void	read_from_file(char *fname);
