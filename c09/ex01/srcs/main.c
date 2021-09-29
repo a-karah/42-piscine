@@ -1,4 +1,4 @@
-#include "funcs.h"
+#include "ft.h"
 
 int	main(void)
 {
