@@ -1,4 +1,4 @@
-INCL_DIR = includes/
+HEADER = -I includes/
 SRC_DIR = ./srcs/
 SRC_FILES = ft_putchar.c \
 	   ft_swap.c \
@@ -17,8 +17,8 @@ RM = rm -f
 
 all: $(LIB_NAME)
 
-$(SRC_DIR)%.o: $(SRC_DIR).c
-	$(CC) $(CFLAGS) -I $(INCL_DIR) -c $< -o $@
+$(SRC_DIR)%.o: $(SRC_DIR)%.c
+	$(CC) $(CFLAGS) -c $< -o $@ $(HEADER)
 
 $(LIB_NAME): $(OBJS)
 	$(ARCH) $@ $^
