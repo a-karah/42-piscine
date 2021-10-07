@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akarahan <akarahan@student.42istanbul      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/07 14:20:09 by akarahan          #+#    #+#             */
+/*   Updated: 2021/10/07 14:20:10 by akarahan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
 int	ft_strlen(char *str)
@@ -28,13 +40,13 @@ char	*ft_strcat(char *dest, char *src)
 
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
-	int	len;
-	int	i;
-	char *str;
+	int		len;
+	int		i;
+	char	*str;
 
 	i = 0;
 	len = 0;
-	while(i < size)
+	while (i < size)
 	{
 		len += ft_strlen(strs[i]);
 		i++;

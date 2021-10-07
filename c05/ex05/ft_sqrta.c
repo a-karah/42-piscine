@@ -1,4 +1,4 @@
-int		ft_sqrt(int nb)
+int	ft_sqrt(int nb)
 {
 	int	n;
 

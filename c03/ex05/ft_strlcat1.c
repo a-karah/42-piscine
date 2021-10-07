@@ -1,6 +1,6 @@
 unsigned int	ft_strlen(char *str)
 {
-	unsigned int counter;
+	unsigned int	counter;
 
 	counter = 0;
 	while (*str != '\0')
@@ -13,8 +13,8 @@ unsigned int	ft_strlen(char *str)
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	unsigned int c;
-	unsigned int d;
+	unsigned int	c;
+	unsigned int	d;
 
 	if (size <= ft_strlen(dest))
 		return (size + ft_strlen(src));
