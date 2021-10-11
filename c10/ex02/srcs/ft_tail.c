@@ -6,7 +6,7 @@
 /*   By: akarahan <akarahan@student.42istanbul      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 14:22:24 by akarahan          #+#    #+#             */
-/*   Updated: 2021/10/11 20:46:53 by akarahan         ###   ########.fr       */
+/*   Updated: 2021/10/11 21:17:04 by akarahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ int	total_bytes(char *fname)
 			total_read += readsize;
 		}
 	}
+	close(fd);
 	return (total_read);
 }
 

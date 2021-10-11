@@ -23,9 +23,9 @@ obj: $(SRCS)
 	@mkdir -p $(OBJDIR)
 
 ${NAME}: ${OBJS}
-	@echo "================"
-	@echo "Compiling files"
-	@echo "================"
+	@echo "===================="
+	@echo "   Compiling ...."
+	@echo "===================="
 	${CC} ${CFLAGS} ${OBJS} -o ${NAME}
 
 ${OBJDIR}/%.o: ${SRCDIR}/%.c
@@ -41,15 +41,15 @@ test:
 	bash -c "diff <(./ft_tail -c 6000 alice_in_wonderland.txt through_the_looking_glass.txt) <(tail -c +6000 alice_in_wonderland.txt through_the_looking_glass.txt)"
 
 clean:
-	@echo "================"
-	@echo "Cleaning objects"
-	@echo "================"
+	@echo "===================="
+	@echo "  Cleaning objects"
+	@echo "===================="
 	${RM} ${OBJDIR}
 
 fclean: clean
-	@echo "================"
+	@echo "==================="
 	@echo "Cleaning executable"
-	@echo "================"
+	@echo "==================="
 	${RM} ${NAME}
 
 re: fclean all
