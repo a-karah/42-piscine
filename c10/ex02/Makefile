@@ -4,12 +4,12 @@ SRCDIR := ./srcs
 OBJDIR = ./obj
 SRCFILES = error.c \
 	   helpers.c \
-	   ft_cat.c \
+	   ft_tail.c \
 	   main.c
 OBJFILES = ${SRCFILES:.c=.o}
 SRCS = $(addprefix $(SRCDIR)/, $(SRCFILES))
 OBJS = $(addprefix $(OBJDIR)/, $(OBJFILES))
-NAME := ft_cat
+NAME := ft_tail
 
 # Compiler defines
 CC := gcc
@@ -33,6 +33,12 @@ ${OBJDIR}/%.o: ${SRCDIR}/%.c
 
 debug: obj ${OBJS}
 	${CC} ${CFDEBUG} ${OBJS} -o $(NAME)
+
+test:
+	bash -c "diff <(./ft_tail -c -6000 alice_in_wonderland.txt through_the_looking_glass.txt) <(tail -c 6000 alice_in_wonderland.txt through_the_looking_glass.txt)"
+	bash -c "diff <(./ft_tail -c -1000 alice_in_wonderland.txt through_the_looking_glass.txt) <(tail -c 1000 alice_in_wonderland.txt through_the_looking_glass.txt)"
+	bash -c "diff <(./ft_tail -c 1000 alice_in_wonderland.txt through_the_looking_glass.txt) <(tail -c +1000 alice_in_wonderland.txt through_the_looking_glass.txt)"
+	bash -c "diff <(./ft_tail -c 6000 alice_in_wonderland.txt through_the_looking_glass.txt) <(tail -c +6000 alice_in_wonderland.txt through_the_looking_glass.txt)"
 
 clean:
 	@echo "================"
