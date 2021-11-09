@@ -3,7 +3,7 @@ Benim [42istanbul'da](https://www.42istanbul.com.tr/tr/) 31 Ağustos 2021 09:42 
 
 İkinci havuz tarihleri: 18 Ekim 2021 09:42 -> 12 Kasım 2021 20:42
 
-[![akarahan's 42 stats](https://badge42.herokuapp.com/api/stats/akarahan?darkmode=true&cursus=C%20Piscine)](https://github.com/JaeSeoKim/badge42)
+[![akarahan's 42 stats](https://badge42.herokuapp.com/api/stats/akarahan?cursus=C%20Piscine)](https://github.com/JaeSeoKim/badge42)
 
 # Useful Links
 [Profile](https://profile.intra.42.fr/)
