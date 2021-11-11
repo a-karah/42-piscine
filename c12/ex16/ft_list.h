@@ -26,6 +26,5 @@ void	ft_list_merge(t_list **begin_list1, t_list *begin_list2);
 void	ft_list_sort(t_list **begin_list, int (*cmp)());
 void	ft_list_reverse_fun(t_list *begin_list);
 void	ft_sorted_list_insert(t_list **begin_list, void *data, int (*cmp)());
-void	ft_sorted_list_merge(t_list **begin_list1, t_list *begin_list2, int (*cmp)());
 
 #endif
