@@ -6,7 +6,7 @@
 /*   By: akarahan <akarahan@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 20:57:06 by akarahan          #+#    #+#             */
-/*   Updated: 2021/12/20 21:04:34 by akarahan         ###   ########.fr       */
+/*   Updated: 2021/12/23 21:53:18 by akarahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,16 @@ void	print_address(intptr_t nbr)
 	i = 0;
 	while (nbr)
 	{
-		tab[i] = g_hex[nbr % 16];
+		tab[15 - i] = g_hex[nbr % 16];
 		nbr /= 16;
 		++i;
 	}
 	while (i < 16)
 	{
-		tab[i] = '0';
+		tab[15 - i] = '0';
 		++i;
 	}
-	while (--i > -1)
-		write(1, &tab[i], 1);
+	write(1, tab, i);
 	write(1, ": ", 2);
 }
 
