@@ -6,7 +6,7 @@
 /*   By: akarahan <akarahan@student.42istanbul.com. +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 20:57:06 by akarahan          #+#    #+#             */
-/*   Updated: 2021/12/23 21:53:18 by akarahan         ###   ########.fr       */
+/*   Updated: 2021/12/25 21:32:55 by akarahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,39 +36,40 @@ void	print_address(intptr_t nbr)
 	write(1, ": ", 2);
 }
 
-void	print_hex(unsigned char *p)
+void	print_hex(unsigned char *p, unsigned int n)
 {
 	int	j;
 
 	j = 0;
-	while (j < 16)
+	while (j < n)
 	{
 		write(1, &g_hex[(*(p + j) / 16) % 16], 1);
 		write(1, &g_hex[*(p + j) % 16], 1);
-		if (j % 2 == 1)
+		if (j % 2)
 			write(1, " ", 1);
-		if (*(p + j) == 0)
-		{
-			write(1, "    ", 4);
-			break ;
-		}
+		++j;
+	}
+	while (j < 16)
+	{
+		write(1, " ", 1);
+		write(1, " ", 1);
+		if (j % 2)
+			write(1, " ", 1);
 		++j;
 	}
 }
 
-void	print_text(unsigned char *p)
+void	print_text(unsigned char *p, unsigned int n)
 {
 	int	j;
 
 	j = 0;
-	while (j < 16)
+	while (j < n)
 	{
 		if (31 < *(p + j) && *(p + j) < 128)
 			write(1, (p + j), 1);
 		else
 			write(1, ".", 1);
-		if (*(p + j) == 0)
-			break ;
 		++j;
 	}
 }
@@ -76,15 +77,19 @@ void	print_text(unsigned char *p)
 void	*ft_print_memory(void *addr, unsigned int size)
 {
 	unsigned char	*ptr;
+	int				n;
 	int				i;
 
 	i = 0;
+	n = 16;
 	ptr = (unsigned char *)addr;
 	while (i < size)
 	{
+		if (i + 16 > size)
+			n = size - i;
 		print_address((intptr_t)(ptr + i));
-		print_hex(ptr + i);
-		print_text(ptr + i);
+		print_hex(ptr + i, n);
+		print_text(ptr + i, n);
 		write(1, "\n", 1);
 		i += 16;
 	}
