@@ -5,6 +5,8 @@ Benim [42istanbul'da](https://www.42istanbul.com.tr/tr/) 31 Ağustos 2021 09:42 
 
 Ucuncu havuz tarihleri: 22 Kasim 2021 09:42 -> 17 Aralik 2021 20:42
 
+Kickoff: 03 Ocak 2022 09:42 -> ♾️
+
 [![akarahan's 42 stats](https://badge42.herokuapp.com/api/stats/akarahan?cursus=C%20Piscine)](https://github.com/JaeSeoKim/badge42)
 
 # Useful Links
