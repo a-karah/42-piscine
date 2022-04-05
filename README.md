@@ -7,7 +7,9 @@ Ucuncu havuz tarihleri: 22 Kasim 2021 09:42 -> 17 Aralik 2021 20:42
 
 Kickoff: 03 Ocak 2022 09:42 -> ♾️
 
-[![akarahan's 42 stats](https://badge42.herokuapp.com/api/stats/akarahan?cursus=C%20Piscine)](https://github.com/JaeSeoKim/badge42)
+<div align="center">
+  <a href="https://github.com/JaeSeoKim/badge42"><img src="https://badge42.vercel.app/api/v2/cl1l5f6ei003509lh6jxnpqfl/stats?cursusId=9&coalitionId=piscine" /></a>
+</div>
 
 # Useful Links
 [Profile](https://profile.intra.42.fr/)
