@@ -6,51 +6,63 @@
 /*   By: akarahan <akarahan@student.42istanbul      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 18:29:39 by akarahan          #+#    #+#             */
-/*   Updated: 2021/09/11 18:30:15 by akarahan         ###   ########.fr       */
+/*   Updated: 2022/05/08 20:12:04 by akarahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	i;
+#include <stdlib.h>
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+int	ft_isspace(char c)
+{
+	return (c == ' ' || c == '\t' || c == '\n');
 }
 
-int	ft_cmp_char(char *str, char c)
+int	ft_isbase(char *base, char c)
 {
 	int	i;
 
-	i = 0;
-	while (str[i] != '\0' && str[i] != c)
-		i++;
-	return (i);
+	i = -1;
+	while (base[++i])
+		if (base[i] == c)
+			return (1);
+	return (0);
+}
+
+int	ft_strlen(char *s)
+{
+	char	*p;
+
+	p = s;
+	while (*p)
+		++p;
+	return (p - s);
 }
 
 int	ft_atoi_base(char *str, char *base)
 {
-	int	i;
-	int	product;
-	int	sign;
-	int	base_len;
+	long	n;
+	int		i;
+	int		b;
+	int		sign;
+	int		j;
 
 	i = 0;
-	product = 0;
+	n = 0;
 	sign = 1;
-	base_len = ft_strlen(base);
-	while (str[i] != '\0')
+	b = ft_strlen(base);
+	while (ft_isspace(str[i]))
+		++i;
+	if (str[i] == '-')
+		sign = -1;
+	if (str[i] == '-' || str[i] == '+')
+		++i;
+	while (ft_isbase(base, str[i]))
 	{
-		if (str[i] == '-')
-			sign = -sign;
-		if (str[i] >= base[0] && str[i] <= base[base_len - 1])
-			product = product * base_len + ft_cmp_char(base, str[i]);
-		if (('A' <= str[i] && str[i] <= 'Z')
-			|| ('a' <= str[i] && str[i] <= 'z'))
-			break ;
-		i++;
+		j = 0;
+		while (base[j] != str[i])
+			++j;
+		n = n * b + j;
+		++i;
 	}
-	return (sign * product);
+	return (sign * n);
 }
