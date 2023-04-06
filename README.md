@@ -17,8 +17,8 @@ Kickoff: 03 Ocak 2022 09:42 -> ♾️
 [Rules](https://companies.intra.42.fr/legal/terms/7?redirect_after_sign=https%3A%2F%2Fcompanies.intra.42.fr%2F)
 
 # Projects
-|SUBJECT|DURATION|EXPERIENCE|STATUS|SUBJECTS|
-|:--|:--|:--:|--:|:--|
+|SUBJECT|DURATION|EXPERIENCE|STATUS|
+|:--|:--|:--:|--:|
 | [Shell 00](./shell00) | about 1 day | 100 XP | 100% ✔️ | [Subjects](./shell00/en.subject.pdf) |
 | [Shell 01](./shell01) | about 1 day | 100 XP | 92% ✔️ | [Subjects](./shell01/en.subject.pdf) |
 | [C 00](./c00)| about 1 day | 100 XP | 76% ✔️ | [Subjects](./c00/en.subject.pdf) |
